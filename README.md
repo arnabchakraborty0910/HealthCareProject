@@ -22,11 +22,42 @@ How has healthcare spending in the United States changed over time, and how well
 
 ### Source
 
-[e.g. Centers for Medicare & Medicaid Services (CMS) National Health Expenditure (NHE) Data, [link]]
+**OECD Health Expenditure and Financing Database** (System of Health Accounts, dataflow `DSD_SHA@DF_SHA`, version 1.1), downloaded from the [OECD Data Explorer](https://data-explorer.oecd.org/) on November 7, 2026.
 
-- **Time period:** [e.g. 1960–2023]
-- **Level:** [e.g. national, yearly totals]
-- **Size:** [number of rows and columns]
+- **Country:** United States
+- **Time period:** 1970–2022, annual
+- **Measure:** Health expenditure per person
+- **Unit:** US dollars per person, PPP converted
+- **Price base:** Current prices (not adjusted for inflation)
+- **Size:** 1,052 rows, ~365 KB
+
+The data is broken down by **financing scheme**, meaning who pays for the healthcare:
+
+| Code | Financing scheme |
+|------|------------------|
+| `_T` | Total (all schemes) |
+| `HF11` | Government schemes |
+| `HF121` | Social health insurance schemes |
+| `HF12HF13` | Compulsory contributory health insurance schemes |
+| `HF2` | Voluntary healthcare payment schemes |
+| `HF21` | Voluntary health insurance schemes |
+| `HF23` | Enterprise financing schemes |
+| `HF3` | Household out-of-pocket payments |
+| `HF2HF3` | Voluntary schemes and out-of-pocket payments combined |
+
+**Key columns used in the analysis:**
+
+- `TIME_PERIOD`: year
+- `OBS_VALUE`: spending per person (USD, PPP)
+- `FINANCING_SCHEME`: financing scheme code
+
+### Access
+
+The raw data file is included in this repository:
+
+`OECD.ELS.HD,DSD_SHA@DF_SHA,1.1,filtered,2026-11-07 23-20-50.csv`
+
+It is publicly available, aggregate national data and contains no individual or patient information.
 
 ### Data Cleaning
 
