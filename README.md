@@ -15,7 +15,7 @@ How has healthcare spending in the United States changed over time, and how well
 
 - Tanya
 - Eric
-- Arnav
+- Arnab
 - Yatharth
 
 ## Data
